@@ -12,16 +12,21 @@ This repository, named `dockerize`, provides Docker configurations for various p
 # Services
 
 - CouchDB
-- Loki-Promtail
+- Grafana
+- Loki
 - MariaDB
+- Metabase
 - MongoDB
 - MySQL
-- Next.js
+- NextJS
+- Node Exporter
 - PostgreSQL
-- Prometheus Node Exporter
+- Prometheus
+- Promtail
 - Redis
 - TimescaleDB
-- Vite
+- Vite (React)
+- Vite (Vue)
 - WordPress
 
 Each service folder contains the necessary Dockerfiles, configurations, and any additional information needed to run the service in a Docker container.

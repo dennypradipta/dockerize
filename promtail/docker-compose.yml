@@ -2,7 +2,7 @@ version: "3"
 
 services:
   promtail:
-    image: grafana/promtail:2.9.0
+    image: grafana/promtail
     restart: unless-stopped
     volumes:
       - /var/log/nginx:/var/log/nginx

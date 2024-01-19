@@ -1,10 +1,10 @@
-version: '3'
+version: "3"
 services:
   timescaledb:
-    image: timescale/timescaledb:latest-pg13
+    image: timescale/timescaledb
     container_name: symon-sass-timescaledb
     ports:
-      - '5432:5432'
+      - "5432:5432"
     environment:
       # Modify the credentials
       POSTGRES_PASSWORD: timescale

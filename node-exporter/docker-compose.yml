@@ -1,0 +1,13 @@
+version: "3"
+services:
+  node-exporter:
+    restart: unless-stopped
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node-exporter
+    command: --path.rootfs=/host
+    network_mode: "host"
+    pid: "host"
+    volumes:
+      - /:/host:ro,rslave
+    ports:
+      - "9100:9100"
