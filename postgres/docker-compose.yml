@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      # Modify the credentials
+      POSTGRES_PASSWORD: <your_password>
+      POSTGRES_USER: <your_user>
+      POSTGRES_DB: <your_db>
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+version: ‘3’
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    volumes:
+      - ./wordpress:/var/www/html/
+    environment:
+      # Modify your credentials
+      WORDPRESS_DB_HOST: <your_host>
+      WORDPRESS_DB_USER: <your_user>
+      WORDPRESS_DB_PASSWORD: <your_db_password>
+      WORDPRESS_DB_NAME: <your_db_name>

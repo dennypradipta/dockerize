@@ -1,0 +1,15 @@
+version: '3'
+services:
+  timescaledb:
+    image: timescale/timescaledb:latest-pg13
+    container_name: symon-sass-timescaledb
+    ports:
+      - '5432:5432'
+    environment:
+      # Modify the credentials
+      POSTGRES_PASSWORD: timescale
+      POSTGRES_USER: timescale
+      POSTGRES_DB: timescale
+    volumes:
+      - ./timescale:/var/lib/postgresql/data
+    restart: unless-stopped

@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  promtail:
+    image: grafana/promtail:2.9.0
+    restart: unless-stopped
+    volumes:
+      - /var/log/nginx:/var/log/nginx
+      - ./promtail:/etc/promtail
+    command: -config.file=/etc/promtail/config.yml

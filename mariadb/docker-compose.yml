@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  db:
+    image: mariadb
+    environment:
+      # Modify your credentials
+      MYSQL_ROOT_PASSWORD: <your_root_password>
+      MYSQL_DATABASE: <your_database>
+      MYSQL_USER: <your_user>
+      MYSQL_PASSWORD: <your_password>
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"

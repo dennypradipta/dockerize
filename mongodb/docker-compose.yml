@@ -1,0 +1,11 @@
+version: "3.1"
+
+services:
+  mongodb:
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb:/data/db
+      - ./mongodb:/data/configdb

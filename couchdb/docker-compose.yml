@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  couchdb:
+    image: ibmcom/couchdb3
+    platform: linux/amd64
+    environment:
+      # Modify the credentials
+      - COUCHDB_PASSWORD=<your_password>
+      - COUCHDB_USER=<your_user>
+    ports:
+      - "5984:5984"
+    volumes:
+      - ./couchdata:/opt/couchdb/data
+    restart: unless-stopped
